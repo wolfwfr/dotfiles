@@ -19,23 +19,5 @@ return {
         },
       }
     end,
-
-    -- opts = {
-    --   defaults = {
-    --     border = true,
-    --     -- mappings = {
-    --     --   i = {
-    --     --     ["<C-j>"] = "next_item",
-    --     --     ["<C-k>"] = "previous_item",
-    --     --     -- ["<C-p>"] = "",
-    --     --   },
-    --     -- },
-    --   },
-    --   pickers = {
-    --     find_files = {
-    --       hidden = true,
-    --     },
-    --   },
-    -- },
   },
 }
