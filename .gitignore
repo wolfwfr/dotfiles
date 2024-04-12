@@ -6,7 +6,6 @@
 !.markdownlintrc
 !.gitconfig
 !.profile
-!.tmux.conf
 
 # top-to-bottom sequence is important; last match to a file is valid
 # allow scanning into /.config/
@@ -17,6 +16,7 @@
 !/.config/nvim/
 !/.config/kitty/
 !/.config/fish/
+!/.config/tmux/
 
 # ignore fish dir contents
 /.config/fish/*
