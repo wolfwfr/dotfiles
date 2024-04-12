@@ -1,3 +1,8 @@
+if status is-interactive
+    and not set -q TMUX
+    exec tmux
+end
+
 set -x PATH $PATH /usr/local/go/bin ~/go/bin
 set -x PATH $PATH /home/wolf/.local/kitty.app/bin
 set -x TERM xterm-color
