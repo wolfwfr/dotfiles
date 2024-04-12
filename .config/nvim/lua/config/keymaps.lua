@@ -6,3 +6,5 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
 
 -- vim.keymap.set("n", "{", "{zz", { silent = true })
 -- vim.keymap.set("n", "}", "}zz", { silent = true })
+
+vim.keymap.set("n", "<c-P>", "<cmd>lua require('fzf-lua').buffers()<CR>", { silent = true })
