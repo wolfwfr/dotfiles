@@ -8,3 +8,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
 -- vim.keymap.set("n", "}", "}zz", { silent = true })
 
 vim.keymap.set("n", "<c-P>", "<cmd>lua require('fzf-lua').buffers()<CR>", { silent = true })
+
+vim.keymap.set("n", "<c-h>", "<cmd>TmuxNavigateLeft<CR>")
+vim.keymap.set("n", "<c-l>", "<cmd>TmuxNavigateRight<CR>")
+vim.keymap.set("n", "<c-j>", "<cmd>TmuxNavigateDown<CR>")
+vim.keymap.set("n", "<c-k>", "<cmd>TmuxNavigateUp<CR>")
