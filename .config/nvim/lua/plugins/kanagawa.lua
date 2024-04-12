@@ -11,7 +11,7 @@ return {
       local theme = colors.theme
       return {
         -- lazyGit selection row background defaults to palette.crystalBlue
-        NormalFloat = { bg = "none", fg = "#a19a75" }, -- fg = e.g. terminal/lazygit primary text colours
+        NormalFloat = { bg = "none" }, -- fg = e.g. terminal/lazygit primary text colours
         -- NormalFloat = { bg = "none", fg = "#9db0b0" },
         -- NormalFloat = { bg = "none", fg = colors.palette.katanaGray }, -- fg = e.g. terminal/lazygit text colours
         FloatBorder = { bg = "none", fg = colors.palette.winterYellow },
