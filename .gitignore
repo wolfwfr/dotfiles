@@ -22,6 +22,7 @@
 /.config/fish/*
 # except these files
 !/.config/fish/config.fish
+!/.config/fish/archive
 
 # ignore nvim dir contents
 /.config/nvim/*

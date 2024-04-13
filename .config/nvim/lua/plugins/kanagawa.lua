@@ -12,28 +12,17 @@ return {
       return {
         -- lazyGit selection row background defaults to palette.crystalBlue
         NormalFloat = { bg = "none" }, -- fg = e.g. terminal/lazygit primary text colours
-        -- NormalFloat = { bg = "none", fg = "#9db0b0" },
-        -- NormalFloat = { bg = "none", fg = colors.palette.katanaGray }, -- fg = e.g. terminal/lazygit text colours
         FloatBorder = { bg = "none", fg = colors.palette.winterYellow },
         FloatTitle = { bg = "none" },
         Pmenu = { bg = "none" }, -- bg = popup-menu background
         PmenuSel = { bg = "none", fg = colors.palette.samuraiRed },
-        -- CmpCompletion = { bg = "none" },
-        -- CmpCompletionSel = { bg = "none" },
-        -- CmpCompletionThumb = { bg = "none" },
-        -- CmpCompletionSbar = { bg = "none" },
-        -- CmpCompletionBorder = { bg = "none", fg = "none" },
 
-        -- lualine_x_6_normal = { fg = colors.palette.winterYellow },
         TelescopeTitle = { bg = "none" },
         TelescopeBorder = { bg = "none", fg = colors.palette.winterYellow },
 
         NeoTreeDirectoryName = { fg = "#8ba4b0" },
         NeoTreeDirectoryIcon = { fg = "#8ba4b0" },
         NeoTreeFileName = { fg = colors.palette.fujiWhite },
-
-        -- LazyGitBorder = { fg = "none", bg = "none" },
-        -- CursorLine = { bg = "NONE", underline = true },
       }
     end,
     colors = {

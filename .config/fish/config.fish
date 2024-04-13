@@ -1,10 +1,6 @@
-if status is-interactive
-    and not set -q TMUX
-    exec tmux
-end
-
 set -x PATH $PATH /usr/local/go/bin ~/go/bin
 set -x PATH $PATH /home/wolf/.local/kitty.app/bin
+set -x PATH $PATH /home/wolf/.config/tmux/plugins/tmuxifier/bin
 set -x TERM xterm-color
 set -x GO111MODULE on
 set -x AWS_REGION us-east-1
@@ -23,3 +19,5 @@ alias n="nvim ."
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 thefuck --alias | source
+
+eval (tmuxifier init - fish)

@@ -1,0 +1,8 @@
+### config.fish
+
+# start tmux when instantiating shell
+# if status is-interactive
+#     and not set -q TMUX
+#     exec tmux a
+#     #exec tmuxifier load-session def
+# end

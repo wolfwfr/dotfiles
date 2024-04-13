@@ -4,8 +4,7 @@
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { silent = true })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
 
--- vim.keymap.set("n", "{", "{zz", { silent = true })
--- vim.keymap.set("n", "}", "}zz", { silent = true })
+vim.keymap.set("n", "<leader>/", "<C-W>v", { desc = "Split Window Right", remap = true })
 
 vim.keymap.set("n", "<c-P>", "<cmd>lua require('fzf-lua').buffers()<CR>", { silent = true })
 
