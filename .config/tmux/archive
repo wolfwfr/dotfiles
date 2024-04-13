@@ -1,0 +1,15 @@
+### settings
+# set-option -g terminal-overrides ',xterm-256color:RGB'
+# set -g default-terminal "xterm-kitty"
+# set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
+# set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colors - needs tmux-3.0
+
+### bindings
+
+
+### plugins
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'github_username/plugin_name#branch'
+# set -g @plugin 'git@github.com:user/plugin'
+# set -g @plugin 'git@bitbucket.com:user/plugin'
