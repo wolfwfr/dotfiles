@@ -15,6 +15,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     -- import/override with your plugins
     { import = "plugins" },
+    { import = "custom" },
   },
   ui = {
     border = "rounded",
@@ -43,3 +44,5 @@ require("lazy").setup({
     },
   },
 })
+
+require("custom.autoNote")
