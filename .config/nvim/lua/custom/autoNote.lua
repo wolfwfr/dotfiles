@@ -20,9 +20,9 @@ vim.api.nvim_create_user_command("AutoNote", function()
   local day = os.date("%a", os.time())
   local dayconv = conv(day)
   local filename = time .. " [" .. dayconv .. "]" .. ".md"
-  vim.fn.jobstart({ "touch", filename })
-
-  vim.cmd("e " .. filename)
+  vim.fn.jobstart({ "touch", filename }) -- create file
+  vim.cmd("e " .. filename) -- open file
+  vim.api.nvim_input("i# ") -- enter insert mode & start file with a heading
 end, {})
 
 return {}
