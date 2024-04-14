@@ -19,8 +19,10 @@ vim.api.nvim_create_user_command("AutoNote", function()
   local time = os.date("%Y-%m-%d", os.time())
   local day = os.date("%a", os.time())
   local dayconv = conv(day)
-  local command = { "touch", time .. " [" .. dayconv .. "]" .. ".md" }
-  vim.fn.jobstart(command)
+  local filename = time .. " [" .. dayconv .. "]" .. ".md"
+  vim.fn.jobstart({ "touch", filename })
+
+  vim.cmd("e " .. filename)
 end, {})
 
 return {}

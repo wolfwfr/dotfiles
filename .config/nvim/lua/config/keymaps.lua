@@ -8,6 +8,8 @@ vim.keymap.set("n", "<leader>/", "<C-W>v", { desc = "Split Window Right", remap 
 
 vim.keymap.set("n", "<c-P>", "<cmd>lua require('fzf-lua').buffers()<CR>", { silent = true })
 
+vim.keymap.set("n", "<leader>nn", "<cmd>AutoNote<CR>")
+
 vim.keymap.set("n", "<c-h>", "<cmd>TmuxNavigateLeft<CR>")
 vim.keymap.set("n", "<c-l>", "<cmd>TmuxNavigateRight<CR>")
 vim.keymap.set("n", "<c-j>", "<cmd>TmuxNavigateDown<CR>")
