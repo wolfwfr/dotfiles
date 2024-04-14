@@ -16,6 +16,7 @@ alias got="go test ./..."
 alias gt="git tag -l | sort -V | tail"
 alias awscode="ykman oath accounts code aws"
 alias n="nvim ."
+alias ns="nvim" # ns=nvim session (auto-session will create or load a session)
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 thefuck --alias | source
