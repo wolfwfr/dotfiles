@@ -17,6 +17,7 @@
 !/.config/kitty/
 !/.config/fish/
 !/.config/tmux/
+!/.config/wezterm/
 
 # ignore fish dir contents
 /.config/fish/*
