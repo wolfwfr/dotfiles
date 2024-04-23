@@ -3,6 +3,7 @@ return {
   opts = {
     defaults = {
       ["<leader>n"] = { name = "+notes" },
+      ["<leader>t"] = { name = "+test" },
     },
   },
   config = function(_, opts)

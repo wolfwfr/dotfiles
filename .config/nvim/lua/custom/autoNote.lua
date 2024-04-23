@@ -1,4 +1,7 @@
-vim.api.nvim_create_user_command("AutoNote", function()
+local journalDir = "journal"
+local notesDir = "notes"
+
+local function makeNote(dirname)
   local tabl = {
     ["ma"] = "mon",
     ["di"] = "tue",
@@ -21,13 +24,38 @@ vim.api.nvim_create_user_command("AutoNote", function()
   local dayconv = conv(day)
   local filename = time .. " [" .. dayconv .. "]" .. ".md"
 
-  vim.fn.jobstart({ "touch", filename }) -- create file
+  if dirname ~= journalDir then
+    local confirm = vim.fn.confirm("custom filename?", "&y\n&n", "n")
+    if confirm == 1 then
+      local fn_override = vim.fn.input("filename: ")
+      filename = fn_override
+    end
+  end
 
-  vim.cmd("e " .. filename) -- open file
+  local fullpath = "./" .. dirname .. "/" .. filename
 
-  if vim.fn.getfsize(filename) < 1 then
+  local file = io.open(fullpath, "a")
+  if file then
+    file:close()
+  end
+
+  vim.cmd("e " .. fullpath) -- open file
+
+  if vim.fn.getfsize(fullpath) == 0 and filename:match(".*.md") then
     vim.api.nvim_input("i# ")
   end -- enter insert mode & start file with a heading
+end
+
+vim.api.nvim_create_user_command("AutoNoteJournal", function()
+  return makeNote(journalDir)
+end, {})
+
+vim.api.nvim_create_user_command("AutoNoteNote", function()
+  return makeNote(notesDir)
+end, {})
+
+vim.api.nvim_create_user_command("AutoNoteRoot", function()
+  return makeNote(".")
 end, {})
 
 return {}
