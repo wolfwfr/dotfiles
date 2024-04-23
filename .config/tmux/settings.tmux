@@ -18,3 +18,5 @@ set-option -g allow-rename off
 # enable vi copy-mode in terminal
 setw -g mode-keys vi
 
+# enable mouse support
+set -g mouse on
