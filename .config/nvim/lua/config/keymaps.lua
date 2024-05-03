@@ -6,7 +6,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
 
 vim.keymap.set("n", "<leader>/", "<C-W>v", { desc = "Split Window Right", remap = true })
 
-vim.keymap.set("n", "<c-P>", "<cmd>lua require('fzf-lua').buffers()<CR>", { silent = true })
+-- vim.keymap.set("n", "<c-P>", "<cmd>lua require('fzf-lua').buffers()<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>nj", "<cmd>AutoNoteJournal<CR>", { desc = "new journal entry (journal)" })
 vim.keymap.set("n", "<leader>nn", "<cmd>AutoNoteNote<CR>", { desc = "new note (notes)" })
