@@ -6,3 +6,6 @@
 #     exec tmux a
 #     #exec tmuxifier load-session def
 # end
+
+# Set up fzf key bindings
+# fzf --fish | source
