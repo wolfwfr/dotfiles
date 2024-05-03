@@ -20,3 +20,8 @@ setw -g mode-keys vi
 
 # enable mouse support
 set -g mouse on
+
+# yavi image preview compatibility
+set -g allow-passthrough on
+set -ga update-environment TERM
+set -ga update-environment TERM_PROGRAM

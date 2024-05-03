@@ -19,6 +19,8 @@
 !/.config/tmux/
 !/.config/wezterm/
 !/.config/bat/
+!/.config/yazi/
+!/.config/btop/
 
 # ignore fish dir contents
 /.config/fish/*
@@ -33,3 +35,6 @@
 
 # ignore tmux plugin dir contents
 /.config/tmux/plugins/*
+
+# ignore btop log
+/.config/btop/btop.log
