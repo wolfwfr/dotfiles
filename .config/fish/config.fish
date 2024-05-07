@@ -1,7 +1,7 @@
 set -x PATH $PATH /usr/local/go/bin ~/go/bin
 set -x PATH $PATH /home/wolf/.local/kitty.app/bin
 set -x PATH $PATH /home/wolf/.config/tmux/plugins/tmuxifier/bin
-set -x TERM xterm-color
+set -x TERM xterm-256color
 set -x GO111MODULE on
 set -x AWS_REGION us-east-1
 set -x CHROME_BIN /snap/bin/chromium
