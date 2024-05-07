@@ -21,5 +21,5 @@ bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
 bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
 
 # reload config file
-bind r source-file ~/.config/tmux/tmux.conf
+bind r source-file ~/.config/tmux/tmux.conf \; display " Reloaded!"
 
