@@ -21,6 +21,7 @@
 !/.config/bat/
 !/.config/yazi/
 !/.config/btop/
+!/.config/i3/
 
 # ignore fish dir contents
 /.config/fish/*
