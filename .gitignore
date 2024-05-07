@@ -22,6 +22,7 @@
 !/.config/yazi/
 !/.config/btop/
 !/.config/i3/
+!/.config/polybar/
 
 # ignore fish dir contents
 /.config/fish/*
