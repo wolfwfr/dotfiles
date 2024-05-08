@@ -276,6 +276,8 @@ exec_always xrandr --output eDP1 --primary --mode 1920x1080 --pos 2560x360 --rot
 exec_always numlockx on
 
 for_window [class="Pavucontrol"] floating enable
+for_window [urgent="latest"] focus
+for_window [class="^.*"] border pixel 0
 
 # set $bg-color 	         #2f343f
 set $bg-color            #000000
@@ -286,7 +288,6 @@ set $text-color          #DCD7BA
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
-for_window [class="^.*"] border pixel 0
 # window colors
 #                       border              background         text                 indicator
 client.focused          $inactive-bg-color  $inactive-bg-color $text-color          #00ff00
