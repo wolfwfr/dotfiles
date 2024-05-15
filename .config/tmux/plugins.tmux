@@ -22,7 +22,7 @@ set -g @resurrect-strategy-nvim 'session'
 # requires sponge
 set -g @resurrect-hook-pre-restore-all 'target=$(readlink -f $resurrect_dir/last); sed "s|/squashfs-root/usr/bin/||g" $target | sponge $target'
 set -g @resurrect-processes 'neofetch neo btop wtfutil'
-set -g @resurrect-capture-pane-contents 'on'
+# set -g @resurrect-capture-pane-contents 'on'
 
 # tmux-continuum
 set -g @plugin 'tmux-plugins/tmux-continuum'
