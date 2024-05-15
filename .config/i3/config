@@ -28,7 +28,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 04090e --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i ~/.config/i3/img/autumn-forest-blur.png --tiling --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -72,7 +73,14 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run
+# bindsym $mod+d exec rofi -show run
+# requires https://github.com/adi1090x/rofi
+bindsym $mod+d exec --no-startup-id rofi \
+    -monitor -1 -show drun -theme ~/.config/rofi/launchers/type-6/style-4.rasi
+# requires https://github.com/erebe/greenclip
+bindsym $mod+c exec --no-startup-id rofi \
+    -monitor -1 -theme ~/.config/rofi/launchers/type-7/style-4.rasi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -106,7 +114,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+/ split h
+bindsym $mod+o split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -218,6 +226,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# yubikey shortcut
+bindsym $mod+y exec /home/wolf/go/src/local/yubikey_aws_code/code.sh
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -249,40 +260,18 @@ bindsym $mod+r mode "resize"
 # when (dis)connecting monitors, run xrandr & reload i3
 bindsym $mod+shift+m exec xrandr --auto
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         status_command i3status
-# }
-
-
 # new stuff
-
-mouse_warping none
-
-assign [class="kitty"] $ws1
-assign [class="firefox"] $ws2
-assign [class="Slack"] $ws9
-assign [class="Spotify"] $ws10
-
-exec /home/wolf/.local/kitty.app/bin/kitty
-exec slack
-exec spotify
-exec firefox
-
-# set background
-exec_always feh --bg-scale /home/wolf/Pictures/Wallpapers/1399189217467.jpg
-exec_always xrandr --output eDP1 --primary --mode 1920x1080 --pos 2560x360 --rotate normal --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --mode 2560x1440 --pos 0x0 --rotate normal --output VIRTUAL1 --off
-exec_always numlockx on
 
 for_window [class="Pavucontrol"] floating enable
 for_window [urgent="latest"] focus
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 
 # set $bg-color 	         #2f343f
 set $bg-color            #000000
 set $inactive-bg-color   #000000
-set $active-bg-color     #2a2a37
+# set $active-bg-color     #2a2a37
+set $active-bg-color     #f9b01e
+
 # set $text-color          #f3f4f5
 set $text-color          #DCD7BA
 set $inactive-text-color #676E7D
@@ -290,12 +279,15 @@ set $urgent-bg-color     #E53935
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $inactive-bg-color  $inactive-bg-color $text-color          #00ff00
+client.focused          $inactive-bg-color  $active-bg-color   $text-color          #00ff00
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
-hide_edge_borders both
+mouse_warping none
+gaps inner 8
+smart_gaps on
+hide_edge_borders smart_no_gaps
 
 # bar
 # bar {
@@ -312,8 +304,9 @@ hide_edge_borders both
 #     position top
 # }
 
-mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
+mode "exit: [l]ogout, s[u]spend, [r]eboot, [s]hutdown" {
   bindsym l exec i3-msg exit
+  bindsym u exec systemctl suspend
   bindsym r exec systemctl reboot
   bindsym s exec systemctl poweroff
   bindsym k exec i3lock; mode "default"
@@ -321,11 +314,28 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
   bindsym Return mode "default"
 }
 
-bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
+bindsym $mod+x mode "exit: [l]ogout, s[u]spend, [r]eboot, [s]hutdown"
 
 bindsym $mod+shift+x exec i3lock
 
+assign [class="kitty"] $ws1
+assign [class="firefox"] $ws2
+assign [class="Slack"] $ws9
+assign [class="Spotify"] $ws10
+
+exec /home/wolf/.local/kitty.app/bin/kitty
+exec slack
+exec spotify
+exec firefox
+
+# set background
+exec_always feh --bg-scale /home/wolf/Pictures/Wallpapers/1399189217467.jpg
+exec_always xrandr --output eDP1 --primary --mode 1920x1080 --pos 2560x360 --rotate normal --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --mode 2560x1440 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+exec_always numlockx on
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec_always --no-startup-id xset dpms 0 0 600
+exec_always --no-startup-id greenclip daemon
 
 # exec_always compton
 
