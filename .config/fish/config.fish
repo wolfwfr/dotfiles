@@ -22,6 +22,15 @@ alias bat="batcat"
 alias ls="eza --color=always --long --git"
 alias lss="eza --color=always --icons=always --long --no-filesize --no-time --no-user --no-permissions"
 
+function yy
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
+end
+
 thefuck --alias | source
 
 eval (tmuxifier init - fish)
