@@ -15,6 +15,9 @@ set-option -g renumber-windows on
 # don't rename windows automatically
 set-option -g allow-rename off
 
+# pass xterm style key-sequences to tmux
+set-option -gw xterm-keys on
+
 # enable vi copy-mode in terminal
 setw -g mode-keys vi
 
