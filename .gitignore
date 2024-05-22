@@ -23,6 +23,8 @@
 !/.config/btop/
 !/.config/i3/
 !/.config/polybar/
+!/.config/rofi
+!/.config/dunst
 
 # ignore fish dir contents
 /.config/fish/*

@@ -1,6 +1,6 @@
 set -x PATH $PATH /usr/local/go/bin ~/go/bin
 set -x PATH $PATH /home/wolf/.local/kitty.app/bin
-set -x PATH $PATH /home/wolf/.config/tmux/plugins/tmuxifier/bin
+#set -x PATH $PATH /home/wolf/.config/tmux/plugins/tmuxifier/bin
 set -x TERM xterm-256color
 set -x GO111MODULE on
 set -x AWS_REGION us-east-1
@@ -33,6 +33,6 @@ end
 
 thefuck --alias | source
 
-eval (tmuxifier init - fish)
+#eval (tmuxifier init - fish)
 
 export BAT_THEME="kanagawa"
