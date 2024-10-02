@@ -27,7 +27,7 @@ return {
     end,
     colors = {
       palette = {
-        crystalBlue = "#393836", -- override crystalBlue for lazyGit UI improvement; crystalBlue is used as active line background
+        -- crystalBlue = "#393836", -- override crystalBlue for lazyGit UI improvement; crystalBlue is used as active line background
       },
       theme = {
         wave = {

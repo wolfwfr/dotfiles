@@ -8,6 +8,7 @@ return {
     },
     config = function()
       require("go").setup({
+        -- verbose = true,
         lsp_inlay_hints = {
           enable = false,
           only_current_line = false,
