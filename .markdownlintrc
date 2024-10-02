@@ -2,21 +2,5 @@
     "default": true,
     "no-hard-tabs": false,
     "MD022": false,
-    "MDo13": false,
+    "MD013": false,
 }
-
-// .markdownlintrc provides configuration for markdownlint, a linter for markdown installed through mason.
-// example:
-// {
-//   "default": true,
-//   "MD003": { "style": "atx_closed" },
-//   "MD005": false,
-//   "MD007": { "indent": 4 },
-//   "no-hard-tabs": false,
-//   "whitespace": false
-// }
-//
-// see: 
-// https://github.com/igorshubovych/markdownlint-cli#configuration
-// and
-// https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.jsonc
