@@ -14,7 +14,7 @@ unbind '"'
 unbind %
 
 bind -n C-Tab next-window
-bind -n C-S-Tab previous-window
+bind -n C-BTab previous-window
 
 bind -n M-H previous-window # frees up prefix-n
 bind -n M-L next-window # frees ups prefix-n

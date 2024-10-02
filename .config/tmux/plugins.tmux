@@ -7,7 +7,10 @@ set -g @plugin 'sainnhe/tmux-fzf'
 
 # tmux-kanagawa
 set -g @plugin 'Nybkox/tmux-kanagawa'
-set -g @kanagawa-plugins "cpu-usage ram-usage"
+set -g @kanagawa-theme 'dragon'
+set -g @kanagawa-ignore-window-colors true
+set -g @kanagawa-show-flags true
+set -g @kanagawa-plugins "ram-usage"
 set -g @kanagawa-show-powerline true
 set -g @kanagawa-show-left-sep  
 set -g @kanagawa-show-right-sep 
@@ -27,5 +30,4 @@ set -g @resurrect-processes 'neofetch neo btop wtfutil'
 # tmux-continuum
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @continuum-restore 'on'
-
 
