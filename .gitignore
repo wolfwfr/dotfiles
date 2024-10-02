@@ -1,7 +1,7 @@
 # ingnore everything
 /*
 
-# but not these files 
+# but not these files
 !.gitignore
 !.markdownlintrc
 !.gitconfig
@@ -23,8 +23,6 @@
 !/.config/btop/
 !/.config/i3/
 !/.config/polybar/
-!/.config/rofi
-!/.config/dunst
 
 # ignore fish dir contents
 /.config/fish/*
@@ -42,3 +40,4 @@
 
 # ignore btop log
 /.config/btop/btop.log
+
