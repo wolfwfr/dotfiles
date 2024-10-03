@@ -4,6 +4,7 @@
 # but not these files
 !.gitignore
 !.markdownlintrc
+!.markdownlint.jsonc
 !.gitconfig
 !.profile
 
