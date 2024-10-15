@@ -2,8 +2,10 @@ return {
   "folke/which-key.nvim",
   opts = {
     defaults = {
-      ["<leader>n"] = { name = "+notes" },
-      ["<leader>t"] = { name = "+test" },
+      { "<leader>n", group = "notes" },
+      { "<leader>t", group = "test" },
+      -- ["<leader>n"] = { name = "+notes" },
+      -- ["<leader>t"] = { name = "+test" },
     },
   },
   config = function(_, opts)
