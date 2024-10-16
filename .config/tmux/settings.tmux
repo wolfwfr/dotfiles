@@ -28,3 +28,6 @@ set -g mouse on
 set -g allow-passthrough on
 set -ga update-environment TERM
 set -ga update-environment TERM_PROGRAM
+
+# increase length of available status
+set -gF status-right-length 1
