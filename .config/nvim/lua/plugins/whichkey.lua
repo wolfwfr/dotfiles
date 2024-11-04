@@ -1,16 +1,12 @@
 return {
   "folke/which-key.nvim",
-  opts = {
-    defaults = {
-      { "<leader>n", group = "notes" },
-      { "<leader>t", group = "test" },
-      -- ["<leader>n"] = { name = "+notes" },
-      -- ["<leader>t"] = { name = "+test" },
-    },
-  },
+  opts = {},
   config = function(_, opts)
     local wk = require("which-key")
     wk.setup(opts)
-    wk.register(opts.defaults)
+    wk.add({
+      { "<leader>n", group = "notes" },
+      { "<leader>t", group = "test" },
+    })
   end,
 }
