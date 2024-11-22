@@ -1,7 +1,10 @@
 # colour styling
 set -as terminal-overrides ',xterm*:Tc:sitm=\E[3m' # fixes colours in neovim & displays italics font without changing background colours
-set -g pane-active-border-style 'fg=magenta,bg=default'
-set -g pane-border-style 'fg=brightblack,bg=default'
+
+# pane colours overruled by catppuccin theme
+# set -g pane-active-border-style fg=magenta,bg=default
+# set -g pane-border-style fg=brightblack,bg=default
+
 
 # set status bar to top
 set-option -g status-position top
