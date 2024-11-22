@@ -38,8 +38,6 @@
 
 # ignore tmux plugin dir contents
 /.config/tmux/plugins/*
-# except these files
-!/.config/tmux/plugins/catppuccin/tmux/themes/catppuccin_kanagawa_tmux.conf
 
 # ignore btop log
 /.config/btop/btop.log
