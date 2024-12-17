@@ -42,7 +42,7 @@ return {
         left_pad = 0,
         right_pad = 2,
         min_width = 5,
-        border = true,
+        border = false,
         border_prefix = false,
         above = "▄",
         below = "▀",

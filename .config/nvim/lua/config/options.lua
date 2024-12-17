@@ -6,4 +6,5 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.pumblend = 0 -- no transparency of individual windows (showing any text behind it, bleh)
 vim.opt.textwidth = 80
+vim.g.snacks_animate = false
 --
