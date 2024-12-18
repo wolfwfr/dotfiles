@@ -22,6 +22,7 @@ alias ns="nvim" # ns=nvim session (auto-session will create or load a session)
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="eza --color=always --long --git"
 alias lss="eza --color=always --icons=always --long --no-filesize --no-time --no-user --no-permissions"
+alias cnvim="rm /home/wolf/.local/state/nvim/shada/*"
 
 function yy
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
