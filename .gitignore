@@ -31,11 +31,6 @@
 !/.config/fish/config.fish
 !/.config/fish/archive
 
-# ignore nvim dir contents
-/.config/nvim/*
-# except these directories
-!/.config/nvim/lua/
-
 # ignore tmux plugin dir contents
 /.config/tmux/plugins/*
 
