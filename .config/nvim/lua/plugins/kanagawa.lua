@@ -1,6 +1,7 @@
 return {
   "rebelot/kanagawa.nvim",
   lazy = false,
+  priority = 1000,
   opts = {
     transparent = true,
     background = {
@@ -15,14 +16,14 @@ return {
         FloatBorder = { bg = "none", fg = colors.palette.winterYellow },
         FloatTitle = { bg = "none" },
         Pmenu = { bg = "none" }, -- bg = popup-menu background
-        PmenuSel = { bg = "none", fg = colors.palette.samuraiRed },
+        -- PmenuSel = { bg = "none", fg = colors.palette.samuraiRed },
 
-        TelescopeTitle = { bg = "none" },
-        TelescopeBorder = { bg = "none", fg = colors.palette.winterYellow },
+        -- TelescopeTitle = { bg = "none" },
+        -- TelescopeBorder = { bg = "none", fg = colors.palette.winterYellow },
+        Normal = { fg = colors.palette.fujiWhite },
 
         NeoTreeDirectoryName = { fg = "#8ba4b0" },
         NeoTreeDirectoryIcon = { fg = "#8ba4b0" },
-        NeoTreeFileName = { fg = colors.palette.fujiWhite },
       }
     end,
     colors = {

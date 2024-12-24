@@ -9,4 +9,8 @@ return {
     -- "ibhagwan/fzf-lua", -- optional
   },
   config = true,
+  opts = {
+    graph_style = "unicode",
+  },
+  lazy = true,
 }
