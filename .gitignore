@@ -24,6 +24,7 @@
 !/.config/btop/
 !/.config/i3/
 !/.config/polybar/
+!/.config/picom
 
 # ignore fish dir contents
 /.config/fish/*
