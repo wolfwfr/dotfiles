@@ -141,6 +141,9 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 04090e --nofork
 
+# turn off by running `redshift -x`
+# exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
+
 # use arandr output here and always run feh (for background) after xrandr
 # exec_always xrandr --output eDP1 --primary --mode 1920x1080 --pos 2560x360 --rotate normal --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --mode 2560x1440 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 # exec_always xrandr --output eDP-1 --mode 1920x1080 --pos 2560x360 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 0x0 --rotate normal \
