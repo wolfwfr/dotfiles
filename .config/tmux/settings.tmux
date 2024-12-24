@@ -34,3 +34,9 @@ set -ga update-environment TERM_PROGRAM
 
 # increase length of available status
 set -gF status-right-length 1
+
+# settings recommended by https://github.com/3rd/image.nvim for the image.nvim
+# plugin
+set -gq allow-passthrough on
+set -g visual-activity off
+set -g default-terminal "${TERM}"
