@@ -23,6 +23,12 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="eza --color=always --long --git"
 alias lss="eza --color=always --icons=always --long --no-filesize --no-time --no-user --no-permissions"
 alias cnvim="rm /home/wolf/.local/state/nvim/shada/*"
+alias rsred="redshift -O 4500"
+alias rsreset="redshift -x"
+alias avl="aws-vault list"
+alias ave="aws-vault exec admin"
+alias aves="aws-vault exec --server admin"
+alias avel="aws-vault exec admin --duration=8h"
 
 function yy
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -40,3 +46,4 @@ thefuck --alias | source
 export BAT_THEME="kanagawa"
 
 zoxide init fish | source
+direnv hook fish | source
