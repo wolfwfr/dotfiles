@@ -24,6 +24,19 @@ return {
 
         NeoTreeDirectoryName = { fg = "#8ba4b0" },
         NeoTreeDirectoryIcon = { fg = "#8ba4b0" },
+
+        -- RenderMarkdownH1Bg = { bg = "#252535" },
+        -- RenderMarkdownH2Bg = { bg = "#223249" },
+        -- RenderMarkdownH3Bg = { bg = "#2D4F67" },
+        -- RenderMarkdownH4Bg = { bg = "#2B3328" },
+        -- RenderMarkdownH5Bg = { bg = "#49443C" },
+        -- RenderMarkdownH6Bg = { bg = "#43242B" },
+        -- RenderMarkdownH1Bg = { bg = "#" },
+        -- RenderMarkdownH2Bg = { bg = "#" },
+        -- RenderMarkdownH3Bg = { bg = "#" },
+        -- RenderMarkdownH4Bg = { bg = "#" },
+        -- RenderMarkdownH5Bg = { bg = "#" },
+        -- RenderMarkdownH6Bg = { bg = "#" },
       }
     end,
     colors = {
