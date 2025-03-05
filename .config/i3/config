@@ -114,6 +114,7 @@ bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
 
 assign [class="kitty"] $ws1
+assign [class="com.mitchellh.ghostty"] $ws1
 # assign [class="firefox"] $ws2
 assign [class="LibreWolf"] $ws2
 assign [class="easyeffects"] $ws8
@@ -126,7 +127,8 @@ assign [class="Spotify"] $ws10
 #########
 
 
-exec kitty
+exec ghostty
+# exec kitty
 exec easyeffects
 exec spotify-launcher
 exec slack
@@ -150,7 +152,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 04090e --nofork
 # exec_always xrandr --output eDP-1 --primary --mode 2256x1504 --pos 2560x0 --rotate normal --output DP-3 --mode 2560x1440 --pos 0x0 --rotate normal \
 
 exec_always xrandr --output eDP-1 --primary --scale 1x1 --pos 2560x0 --rotate normal --output DP-3 --mode 2560x1440 --pos 0x0 --rotate normal \
-&& feh --bg-scale /home/wolf/.config/i3/img/1399189217467.jpg
+&& feh --bg-scale /home/wolf/.config/i3/img/green-trunk.jpg
 
 # office_meeting_room_monitor:
 # exec_always xrandr --output eDP-1 --primary --mode 2256x1504 --pos 0x656 --rotate normal --output DP-1 --off --output DP-2 --mode 3840x2160 --pos 2256x0 --rotate normal --output DP-3 --off --output DP-4 --off --output DP-5 --off --output DP-6 --off --output DP-7 --off --output DP-8 --off
