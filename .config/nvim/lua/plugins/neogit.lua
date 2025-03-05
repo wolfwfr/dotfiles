@@ -5,12 +5,12 @@ return {
     "sindrets/diffview.nvim", -- optional - Diff integration
 
     -- Only one of these is needed, not both.
-    "nvim-telescope/telescope.nvim", -- optional
-    -- "ibhagwan/fzf-lua", -- optional
+    -- "nvim-telescope/telescope.nvim", -- optional
+    "ibhagwan/fzf-lua", -- optional
   },
   config = true,
   opts = {
-    graph_style = "unicode",
+    graph_style = "kitty",
   },
-  lazy = true,
+  -- lazy = true,
 }
