@@ -5,7 +5,7 @@ return {
     lazy = false,
     opts = {
       terminal = {
-        win = { style = "float" },
+        win = { style = "float", border = "rounded" },
       },
       dashboard = {
         preset = {
