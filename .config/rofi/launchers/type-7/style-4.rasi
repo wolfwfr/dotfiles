@@ -39,7 +39,7 @@ window {
     fullscreen:                  false;
     width:                       500px;
     height:                      100%;
-    x-offset:                    0px;
+    x-offset:                    -1px;
     y-offset:                    0px;
 
     /* properties for all widgets */

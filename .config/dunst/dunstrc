@@ -302,7 +302,8 @@
 
 [urgency_normal]
     # background = "#282a36CC"
-    background = "#282A2E20"
+    # background = "#282A2E20"
+    background = "#282A2EEE"
     foreground = "#ffffff"
     # foreground = "#bd93f9"
     # frame_color = "#DCA561"
