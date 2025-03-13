@@ -25,6 +25,8 @@
 !/.config/i3/
 !/.config/polybar/
 !/.config/picom
+!/.config/hypr
+!/.config/waybar
 
 # ignore fish dir contents
 /.config/fish/*
