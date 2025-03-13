@@ -135,7 +135,7 @@ tooltip label{
 #temperature.critical {
 	padding-right: 3px;
 	color: @warning_color;
-	font-size: initial;
+	/*font-size: initial;*/
 	border-bottom: 2px dashed @warning_color;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
