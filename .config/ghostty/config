@@ -1,0 +1,49 @@
+gtk-titlebar = false
+
+background = 000000
+background-opacity = 0.75
+# background-blur-radius = 10
+
+################
+# font styling #
+################
+
+# font-size = 11
+# font-size = 9 for hyprland
+font-size = 9
+font-family = Liberation Mono
+# font-family = DejaVu Sans Mono
+# font-family = Nimbus Mono PS
+# font-family = Hack Nerd Font
+# font-family = Meslo LGS Nerd Font Mono
+# font-family = JetBrains Mono
+# font-family = JetBrainsMono Nerd Font
+# font-family = monospace
+font-family = Symbols Nerd Font Mono
+font-thicken = true
+
+adjust-cell-height = +5%
+
+adjust-box-thickness = 1
+# adjust-underline-position = +1
+
+#########
+# theme #
+#########
+
+theme = Kanagawa Dragon
+
+##########
+# window #
+##########
+
+window-padding-x = 8
+window-padding-y = 4
+
+################
+# key-bindings #
+################
+
+# use tab and back-tab functions in tmux conf
+keybind = "ctrl+tab=unbind"
+keybind = "ctrl+shift+tab=unbind"

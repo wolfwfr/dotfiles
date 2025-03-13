@@ -24,9 +24,10 @@
 !/.config/btop/
 !/.config/i3/
 !/.config/polybar/
-!/.config/picom
-!/.config/hypr
-!/.config/waybar
+!/.config/picom/
+!/.config/hypr/
+!/.config/waybar/
+!/.config/ghostty/
 
 # ignore fish dir contents
 /.config/fish/*
