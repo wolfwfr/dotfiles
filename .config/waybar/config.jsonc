@@ -155,6 +155,7 @@
         "min-length": 5,
         // "device": "acpi_video1",
         "format": "<span color='#4db578'>{icon} </span>{percent}%",
+        "tooltip": false,
         "format-icons": [
             "",
             "",
@@ -179,7 +180,7 @@
         },
         "format": "<span color='#4db578'><big>{icon} </big></span> {capacity}%",
         "format-charging-full": "<span color='#4db578'><big>󱟢</big></span> {capacity}%",
-        "format-charging": "<span color='#4db578'><big>{icon}</big> </span> {capacity}%",
+        "format-charging": "<span color='#33ccff'><big>{icon}</big> </span> {capacity}%",
         "format-full": "<span color='#4db578'><big>󱟢</big></span> {capacity}%",
         // "format-full": "<span color='#4db578'><big>󱟢  </big></span> {capacity}%",
         // "format-good": "<span color='#4db578'>󱟢  </span> {capacity}%",
@@ -215,11 +216,10 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "<span color='#4db578'>  </span> {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{ifname} on {essid} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
-        // "on-click": "nmtui"
     },
     "bluetooth": {
         // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system

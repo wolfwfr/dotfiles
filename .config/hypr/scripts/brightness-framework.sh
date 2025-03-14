@@ -13,7 +13,7 @@ case $command in
     ;;
 
 "down")
-    if [ $(brightnessctl g) -le 13 ]; then
+    if [ $(brightnessctl g) -le 26 ]; then
         brightnessctl s 1%-
     else
         brightnessctl s 5%-
