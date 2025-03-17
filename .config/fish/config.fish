@@ -29,6 +29,13 @@ alias avl="aws-vault list"
 alias ave="aws-vault exec admin"
 alias aves="aws-vault exec --server admin"
 alias avel="aws-vault exec admin --duration=8h"
+alias sourcefish="source ~/.config/fish/config.fish"
+
+# redshifting for wayland
+alias wlreset="ps -C \"wlsunset -t 4500\" -o pid | tail -n -1 | head -n 1 | xargs kill"
+function wlred
+    wlsunset -t 4500 &
+end
 
 function yy
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
