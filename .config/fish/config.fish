@@ -19,7 +19,7 @@ alias gt="git tag -l | sort -V | tail"
 alias awscode="ykman oath accounts code aws"
 alias n="nvim ."
 alias ns="nvim" # ns=nvim session (auto-session will create or load a session)
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="eza --color=always --long --git"
 alias lss="eza --color=always --icons=always --long --no-filesize --no-time --no-user --no-permissions"
 alias cnvim="rm /home/wolf/.local/state/nvim/shada/*"
