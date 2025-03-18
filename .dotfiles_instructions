@@ -1,4 +1,4 @@
-My dotfiles are managed through a bare git repository that separates the
+These dotfiles are managed through a bare git repository that separates the
 git worktree from the .git directory root.
 
 This method was inspired by Marcel Krcah (https://marcel.is/managing-dotfiles-with-git-bare-repo/).
