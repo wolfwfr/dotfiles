@@ -32,7 +32,7 @@ alias avel="aws-vault exec admin --duration=8h"
 alias sourcefish="source ~/.config/fish/config.fish"
 
 # redshifting for wayland
-alias wlreset="ps -C \"wlsunset -t 4500\" -o pid | tail -n -1 | head -n 1 | xargs kill"
+alias wlreset="pidof \"wlsunset\" | xargs kill"
 function wlred
     wlsunset -t 4500 &
 end
