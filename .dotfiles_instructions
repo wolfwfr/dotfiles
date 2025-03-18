@@ -1,0 +1,26 @@
+My dotfiles are managed through a bare git repository that separates the
+git worktree from the .git directory root.
+
+This method was inspired by Marcel Krcah (https://marcel.is/managing-dotfiles-with-git-bare-repo/).
+
+Here follow instructions for the set-up.
+
+## Creating a new repository:
+
+1. create & navigate to a directory that'll host your dotfiles' .git directory
+   (e.g. ~/dotfiles)
+2. run `git init --bare`
+3. configure an alias in your shell for interacting with this git repository,
+   e.g. `alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"`
+4. create (if not planning to pull one from remote repository) a .gitignore file
+   at $HOME that ignores everything (`/*`) except (`!<path-to-my-files>`) the
+   dotfiles.
+
+## Pulling dotfiles on fresh install:
+
+1. follow previous steps
+2. run `git clone <my-remote-repo>`
+3. move all the directories or files to their intended locations.
+4. remove the temporary directory with your git clone.
+5. navigate to the dotfiles .git directory root.
+6. set up the git remote with `git remote add origin <my-remote-git-repo>`
