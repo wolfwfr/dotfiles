@@ -8,6 +8,7 @@
 !.gitconfig
 !.profile
 !.dotfiles_instructions
+!.taskrc
 
 # top-to-bottom sequence is important; last match to a file is valid
 # allow scanning into /.config/
