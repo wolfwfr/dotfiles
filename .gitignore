@@ -15,6 +15,10 @@
 # disallow everything in /.config/
 /.config/*
 # except these directories
+!/Pictures/
+/Pictures/*
+!/Pictures/Wallpapers/
+
 !/.config/nvim/
 !/.config/kitty/
 !/.config/fish/
