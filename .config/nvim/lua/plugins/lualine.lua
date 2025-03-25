@@ -8,8 +8,11 @@ return {
       end
       -- the following returns either the name of the git-repo or nothing at all
       local gitoutput = io.popen("git rev-parse --show-toplevel 2> /dev/null | xargs basename 2> /dev/null")
-      readout = gitoutput:read("*a")
+      local readout = gitoutput:read("*a")
       readout = readout:sub(1, -2) -- string ends with '^@'; sub is safe with empty input
+      if readout:len() > 0 then
+        readout = "󰊢 " .. readout
+      end
       gitname = readout
       gitoutput:close()
       return gitname
@@ -17,7 +20,7 @@ return {
 
     local opts = {
       sections = {
-        lualine_b = { "branch", gitreponame },
+        lualine_b = { gitreponame, "branch" },
       },
     }
     return opts
