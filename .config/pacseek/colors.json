@@ -1,0 +1,15 @@
+{
+  "Transparent": true,
+  "Accent": "C34043",
+  "Title": "FF9E3B",
+  "SearchBar": "2D4F67",
+  "PackagelistSourceRepository": "00b000",
+  "PackagelistSourceAUR": "1793d1",
+  "PackagelistHeader": "DCD7BA",
+  "SettingsFieldBackground": "2D4F67",
+  "SettingsFieldText": "C8C093",
+  "SettingsFieldLabel": "DCD7BA",
+  "SettingsDropdownNotSelected": "1793d1",
+  "StylePKGBUILD": "dracula",
+  "Comments": "Examples for StylePKGBUILD can be found here: https://xyproto.github.io/splash/docs/all.html"
+}
