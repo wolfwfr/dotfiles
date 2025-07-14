@@ -26,3 +26,5 @@ bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
 # reload config file
 bind r source-file ~/.config/tmux/tmux.conf \; display " Reloaded!"
 
+# rebind ctrl-k when using jira CLI
+bind-key -n C-o if-shell "tmux display-message -p '#{pane_current_command}' | grep -q 'jira'" "send-keys C-k" "send-keys C-o"
