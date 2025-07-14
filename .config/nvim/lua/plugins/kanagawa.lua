@@ -22,6 +22,15 @@ return {
         -- TelescopeBorder = { bg = "none", fg = colors.palette.winterYellow },
         Normal = { fg = colors.palette.fujiWhite },
 
+        -- was intended as temporary, but it's actually pretty sexy
+        SnacksDashBoardTitle = { fg = "#27b427" },
+        SnacksDashBoardHeader = { fg = "#27b427" },
+        SnacksDashBoardFooter = { fg = "#27b427" },
+        SnacksDashBoardDesc = { fg = "#1b671b" },
+        SnacksDashBoardFile = { fg = "#1b671b" },
+        SnacksDashBoardIcon = { fg = "#1b671b" },
+        SnacksDashBoardSpecial = { fg = "#1b671b" },
+
         NeoTreeDirectoryName = { fg = "#8ba4b0" },
         NeoTreeDirectoryIcon = { fg = "#8ba4b0" },
 
