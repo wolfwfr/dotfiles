@@ -11,7 +11,7 @@ return {
       local readout = gitoutput:read("*a")
       readout = readout:sub(1, -2) -- string ends with '^@'; sub is safe with empty input
       if readout:len() > 0 then
-        readout = "󰊢 " .. readout
+        readout = " 󰊢  " .. readout
       end
       gitname = readout
       gitoutput:close()
@@ -21,6 +21,7 @@ return {
     local opts = {
       sections = {
         lualine_b = { gitreponame, "branch" },
+        lualine_c = {}, -- I now use incline.nvim for displaying filename
       },
     }
     return opts
