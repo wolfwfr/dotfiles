@@ -6,8 +6,11 @@ return {
       "neovim/nvim-lspconfig",
       "nvim-treesitter/nvim-treesitter",
     },
+    -- commit = "bca78924f47be69743eb66a44162b9389f506fb9",
     config = function()
       require("go").setup({
+        -- lsp_cfg = true,
+        -- lsp_cfg = {},
         -- verbose = true,
         lsp_inlay_hints = {
           enable = false,
@@ -16,6 +19,7 @@ return {
         diagnostic = {
           underline = false,
         },
+        -- lsp_cfg = false,
         lsp_cfg = {
           flags = {
             debounce_text_changes = 0, -- fixes sticky diagnostic error messages
