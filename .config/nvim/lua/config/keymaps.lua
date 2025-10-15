@@ -15,7 +15,7 @@ vim.keymap.set("n", "<c-l>", "<cmd>TmuxNavigateRight<CR>")
 vim.keymap.set("n", "<c-j>", "<cmd>TmuxNavigateDown<CR>")
 vim.keymap.set("n", "<c-k>", "<cmd>TmuxNavigateUp<CR>")
 
-vim.keymap.set("n", "<leader>tl", "<Plug>PlenaryTestFile", { desc = "plenary test file (lua)" })
+-- vim.keymap.set("n", "<leader>tl", "<Plug>PlenaryTestFile", { desc = "plenary test file (lua)" })
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
@@ -29,6 +29,11 @@ vim.keymap.set("n", "<leader>MO", "<CMD>VimatrixOpen<CR>", {})
 vim.keymap.set("n", "<leader>MS", "<CMD>VimatrixScreenSaverStop<CR>", {})
 vim.keymap.set("n", "<leader>MA", "<CMD>VimatrixScreenSaverRestart<CR>", {})
 vim.keymap.set("n", "<leader>MT", "<CMD>VimatrixStop<CR>", {})
+
+vim.keymap.set("n", "<leader>CC", "<CMD>CodeCompanionChat<CR>")
+
+-- paste last yank only
+vim.keymap.set("v", "<leader>p", '"0p', { desc = "paste last yank" })
 
 -- TODO: cleanup
 local function unwrap_lines()
