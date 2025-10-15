@@ -28,16 +28,20 @@ return {
             gopls = {
               analyses = {
                 ST1003 = false,
+                ST1000 = false,
+                ST1020 = false,
+                ST1021 = false,
+                ST1022 = false,
               },
             },
           },
         },
       })
     end,
-    keys = {
-      { "<leader>tf", "<cmd>GoTestFunc<cr>", desc = "test current function" },
-      { "<leader>tp", "<cmd>GoTestPkg<cr>", desc = "test current package" },
-    },
+    -- keys = {
+    --   { "<leader>tf", "<cmd>GoTestFunc<cr>", desc = "test current function" },
+    --   { "<leader>tp", "<cmd>GoTestPkg<cr>", desc = "test current package" },
+    -- },
     event = { "CmdlineEnter" },
     ft = { "go", "gomod" },
     build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
