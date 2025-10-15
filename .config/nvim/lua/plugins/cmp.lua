@@ -19,18 +19,15 @@ return {
   opts = {
     keymap = {
       preset = "super-tab",
-      -- patch for lazyvim due to API change of blink
-      -- see https://github.com/LazyVim/LazyVim/pull/6183
-      ["<Tab>"] = {
-        require("blink.cmp.keymap.presets").get("super-tab")["<Tab>"][1],
-        require("lazyvim.util.cmp").map({ "snippet_forward", "ai_accept" }),
-        "fallback",
-      },
-      -- end of patch
     },
     sources = {
       per_filetype = {
         codecompanion = { "codecompanion" },
+      },
+      providers = {
+        snippets = {
+          score_offset = -10,
+        },
       },
     },
     completion = {
