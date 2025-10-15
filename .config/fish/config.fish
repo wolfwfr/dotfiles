@@ -36,6 +36,7 @@ alias jira='JIRA_API_TOKEN=$(pass show jira/api_token) /usr/bin/jira'
 alias yrc='ykman oath accounts code --single redis | wl-copy -n' # using wayland's clipboard
 alias yac='ykman oath accounts code --single aws | wl-copy -n' # using wayland's clipboard
 alias cl='clockify-cli'
+alias startsshagent='eval (ssh-agent -c)'
 
 # credit: https://unix.stackexchange.com/questions/6910/there-must-be-a-better-way-to-replace-single-newlines-only
 # if line starts (^) with end of line ($); print newline; if any character (.) print
@@ -65,3 +66,6 @@ export BAT_THEME="kanagawa"
 
 zoxide init fish | source
 direnv hook fish | source
+
+# Generated for envman. Do not edit.
+test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
