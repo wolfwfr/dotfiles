@@ -34,6 +34,11 @@ return {
         NeoTreeDirectoryName = { fg = "#8ba4b0" },
         NeoTreeDirectoryIcon = { fg = "#8ba4b0" },
 
+        SnacksPickerFile = { fg = colors.palette.fujiWhite },
+
+        -- old = #7e9cd8
+        Directory = { fg = "#8ba4b0" },
+
         -- RenderMarkdownH1Bg = { bg = "#252535" },
         -- RenderMarkdownH2Bg = { bg = "#223249" },
         -- RenderMarkdownH3Bg = { bg = "#2D4F67" },
