@@ -30,10 +30,16 @@ vim.keymap.set("n", "<leader>MS", "<CMD>VimatrixScreenSaverStop<CR>", {})
 vim.keymap.set("n", "<leader>MA", "<CMD>VimatrixScreenSaverRestart<CR>", {})
 vim.keymap.set("n", "<leader>MT", "<CMD>VimatrixStop<CR>", {})
 
-vim.keymap.set("n", "<leader>CC", "<CMD>CodeCompanionChat<CR>")
+vim.keymap.set("n", "<leader>CC", "<CMD>CodeCompanionChat Toggle<CR>")
+vim.keymap.set("n", "<leader>CA", "<CMD>CodeCompanionActions<CR>")
 
 -- paste last yank only
 vim.keymap.set("v", "<leader>p", '"0p', { desc = "paste last yank" })
+
+-- yank buffer working directory
+vim.api.nvim_create_user_command("BWD", function()
+  vim.fn.setreg("+", vim.fn.expand("%:p"))
+end, {})
 
 -- TODO: cleanup
 local function unwrap_lines()
