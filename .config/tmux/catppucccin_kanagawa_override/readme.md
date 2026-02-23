@@ -4,7 +4,7 @@ Adds a new theme file to the catppuccin themes folder.
 
 ## Requirements
 
-1. install catppuccin theme in the .../tmux/plugins/ directory.
+1. install catppuccin theme (version 1.0.3) in the .../tmux/plugins/ directory.
 
 ## How to apply
 
