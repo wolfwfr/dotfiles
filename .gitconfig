@@ -1,3 +1,6 @@
+[include]
+    path = ~/.config/delta/themes.gitconfig
+
 [user]
 	email = wolffreije@innius.com
 	name = Wolf
@@ -9,9 +12,21 @@
     diffFilter = delta --color-only
 
 [delta]
+    ; features = "tangara-chilensis"
+    features = "mellow-barbet"
     navigate = true  # use n and N to move between diff sections
     dark = true      # or light = true, or omit for auto-detection
     side-by-side = true
+    minus-style = "syntax #2d1010"
+    plus-style = "syntax #122b11"
+    plus-emph-style = "syntax #084604"
+    minus-emph-style = "syntax #5a0000"
+
+    line-numbers-left-style = gray
+    line-numbers-right-style = gray
+    hunk-header-decoration-style = "#949494" ul
+    hunk-header-file-style = "#949494"
+    hunk-header-style = "#949494"
 
 [delta "colors-feature"]
     syntax-theme = kanagawa
@@ -20,3 +35,9 @@
     conflictstyle = zdiff3
 [diff]
 	tool = nvimdiff
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[pager]
+	diff = diffnav
