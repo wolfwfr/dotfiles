@@ -199,3 +199,23 @@ tooltip label{
 #clock:hover {
 	background: @bg_hover;
 }
+
+@define-color warning #F6B016;
+@define-color success #01D38F;
+
+#custom-mullvad {
+  min-width: 14px;
+  margin: 0 7.5px;
+}
+
+#custom-mullvad.connecting {
+  color: @foreground;
+}
+#custom-mullvad.connected {
+  color: @success;
+}
+#custom-mullvad.disconnected {
+  font-size: 16px;
+  margin: 0 7.5px 0 4.5px;
+  color: @error;
+}
