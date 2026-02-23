@@ -20,7 +20,7 @@ alias gt="git tag -l | sort -V | tail"
 alias awscode="ykman oath accounts code aws"
 alias n="nvim ."
 alias ns="nvim" # ns=nvim session (auto-session will create or load a session)
-alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotf="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias lazydot="lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="eza --color=always --long --git"
 alias lss="eza --color=always --icons=always --long --no-filesize --no-time --no-user --no-permissions"
@@ -37,6 +37,9 @@ alias yrc='ykman oath accounts code --single redis | wl-copy -n' # using wayland
 alias yac='ykman oath accounts code --single aws | wl-copy -n' # using wayland's clipboard
 alias cl='clockify-cli'
 alias startsshagent='eval (ssh-agent -c)'
+alias epoch='~/.config/fish/epoch.sh'
+alias awsv1='/usr/bin/aws'
+alias aws='/usr/local/bin/aws' # v2
 
 # credit: https://unix.stackexchange.com/questions/6910/there-must-be-a-better-way-to-replace-single-newlines-only
 # if line starts (^) with end of line ($); print newline; if any character (.) print
@@ -69,3 +72,6 @@ direnv hook fish | source
 
 # Generated for envman. Do not edit.
 test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/wolf/google-cloud-sdk/path.fish.inc' ]; . '/home/wolf/google-cloud-sdk/path.fish.inc'; end
