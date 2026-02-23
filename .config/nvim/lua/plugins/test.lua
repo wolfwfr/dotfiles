@@ -19,7 +19,22 @@ return {
         dependencies = {
           {
             "leoluz/nvim-dap-go",
-            opts = {},
+            opts = function()
+              return {
+                dap_configurations = {
+                  {
+                    type = "go",
+                    name = "Debug (Build Flags)",
+                    request = "launch",
+                    program = "${file}",
+                    -- buildFlags = "-tags=debug",
+                    buildFlags = function()
+                      return require("dap-go").get_build_flags()
+                    end,
+                  },
+                },
+              }
+            end,
           },
         },
       },
