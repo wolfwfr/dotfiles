@@ -4,7 +4,7 @@ return {
     dependencies = { -- optional packages
       "ray-x/guihua.lua",
       "neovim/nvim-lspconfig",
-      "nvim-treesitter/nvim-treesitter",
+      -- "nvim-treesitter/nvim-treesitter",
     },
     -- commit = "bca78924f47be69743eb66a44162b9389f506fb9",
     config = function()
@@ -16,6 +16,7 @@ return {
           enable = false,
           only_current_line = false,
         },
+        lsp_codelens = false,
         diagnostic = {
           underline = false,
         },
@@ -37,6 +38,18 @@ return {
           },
         },
       })
+      local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.go",
+        callback = function()
+          require("go.format").goimports()
+        end,
+        group = format_sync_grp,
+      })
+      return {
+        -- lsp_keymaps = false,
+        -- other options
+      }
     end,
     -- keys = {
     --   { "<leader>tf", "<cmd>GoTestFunc<cr>", desc = "test current function" },

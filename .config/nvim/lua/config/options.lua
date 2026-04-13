@@ -8,3 +8,7 @@ vim.opt.shiftwidth = 4
 vim.opt.pumblend = 0 -- no transparency of individual windows (showing any text behind it, bleh)
 vim.opt.textwidth = 80
 vim.g.snacks_animate = false
+
+-- setting recommended by `:checkhealth auto-session` (specifically emphasizing
+-- 'localoptions' for applying syntax highlighting on session-restore).
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
