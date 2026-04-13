@@ -36,7 +36,7 @@ return {
             },
             schema = {
               model = {
-                default = "openai/gpt-4o-mini",
+                default = "anthropic/claude-sonnet-4.5",
                 choices = {
                   -- to change adapter, open chat & input 'ga' in Normal mode
                   ["openai/o3-mini-2025-01-31"] = { opts = { can_reason = true } },

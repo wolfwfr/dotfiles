@@ -2,6 +2,9 @@
     "table_test": {
         "prefix": "tabletest",
         "body": [
+            "    // convenience resources",
+            "",
+            "    // testcases",
             "    testcases := []struct {",
             "        desc          string",
             "        setup_example any",
