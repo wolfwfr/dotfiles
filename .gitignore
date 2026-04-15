@@ -38,6 +38,8 @@
 
 # ignore fish dir contents
 /.config/fish/*
+# except these directories
+!/.config/fish/scripts
 # except these files
 !/.config/fish/config.fish
 !/.config/fish/archive
