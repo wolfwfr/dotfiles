@@ -37,9 +37,10 @@ alias yrc='ykman oath accounts code --single redis | wl-copy -n' # using wayland
 alias yac='ykman oath accounts code --single aws | wl-copy -n' # using wayland's clipboard
 alias cl='clockify-cli'
 alias startsshagent='eval (ssh-agent -c)'
-alias epoch='~/.config/fish/epoch.sh'
+alias epoch='~/.config/fish/scripts/epoch.sh'
 alias awsv1='/usr/bin/aws'
 alias aws='/usr/local/bin/aws' # v2
+alias protonconnect='~/.config/fish/scripts/protonvpn.sh'
 
 # credit: https://unix.stackexchange.com/questions/6910/there-must-be-a-better-way-to-replace-single-newlines-only
 # if line starts (^) with end of line ($); print newline; if any character (.) print
@@ -74,4 +75,6 @@ direnv hook fish | source
 test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/wolf/google-cloud-sdk/path.fish.inc' ]; . '/home/wolf/google-cloud-sdk/path.fish.inc'; end
+if [ -f '/home/wolf/google-cloud-sdk/path.fish.inc' ]
+    . '/home/wolf/google-cloud-sdk/path.fish.inc'
+end
