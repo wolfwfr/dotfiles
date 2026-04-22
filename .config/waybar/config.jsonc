@@ -333,13 +333,13 @@
     "custom/protonvpn": {
         "format": "{icon}",
         "exec": "$HOME/.config/waybar/scripts/protonvpn.sh",
-        "interval": 60,
+        "interval": 10,
         "return-type": "json",
         "on-click": "$HOME/.config/waybar/scripts/protonvpn.sh toggle",
         "on-click-middle": "proton-vpn",
         // "on-click-right": "$HOME/.config/waybar/scripts/protonvpn.sh reconnect",
         "format-icons": {
-            "connected": "\uf023",
+            "connected": "<span color='#4db578'>\uf023</span>",
             "connecting": "\uf023",
             "disconnected": "\uf2fc"
         },

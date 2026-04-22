@@ -72,30 +72,6 @@ toggle_connection() {
     sleep 1
 }
 
-get_module_data_tmp() {
-    local class alt tooltip
-    echo "{\"text\": \"$VPN_CONNECTION\"}"
-
-    # tooltip="proton VPN\n\nStatus: $VPN_CONNECTION\nRelay: $VPN_RELAY\nVisible Location: $VPN_VISIBLE_LOCATION"
-    #
-    # case "$VPN_CONNECTION" in
-    # Connected)
-    #     class="connected"
-    #     alt="connected"
-    #     ;;
-    # Connecting)
-    #     class="connecting"
-    #     alt="connecting"
-    #     ;;
-    # *)
-    #     class="disconnected"
-    #     alt="disconnected"
-    #     ;;
-    # esac
-
-    # echo "{\"text\": \"$VPN_CONNECTION\", \"tooltip\": \"$tooltip\", \"alt\": \"$alt\", \"class\": \"$class\"}"
-}
-
 # [get_module_data] Get data for custom/protonvpn module in waybar. Returns waybar JSON
 get_module_data() {
     local class alt tooltip
