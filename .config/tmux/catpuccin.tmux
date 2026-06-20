@@ -11,6 +11,7 @@ set -g @catppuccin_window_current_text "#W
 #{?window_zoomed_flag, 󰁌 ,}
 "
 set -g @catppuccin_window_default_text "#W
+
 # #{?window_last_flag, 󰖰 ,}
 #{?window_activity_flag, 󱅫 ,}
 #{?window_bell_flag, 󰂞 ,}
@@ -31,3 +32,4 @@ set -g status-left "#{E:@catppuccin_status_session}"
 set -g status-right ""
 
 set -gF status-left-length 100
+set -gF status-style "bg=#{@thm_surface_1}"
