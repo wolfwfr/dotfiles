@@ -2,9 +2,11 @@
 
 Adds a new theme file to the catppuccin themes folder.
 
-## Requirements
+## What happens
 
-1. install catppuccin theme (version 1.0.3) in the .../tmux/plugins/ directory.
+This script will download the v1.0.3 catppuccin theme for tmux, unzip, and copy
+the contents to the tmux/plugins directory. Then it adds a custom theme file for
+my own kanagawa theme.
 
 ## How to apply
 
