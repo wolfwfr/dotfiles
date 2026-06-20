@@ -35,6 +35,7 @@
 !/.config/waybar/
 !/.config/ghostty/
 !/.config/pacseek/
+!/.config/starship.toml
 
 # ignore fish dir contents
 /.config/fish/*
