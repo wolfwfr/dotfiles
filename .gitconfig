@@ -16,7 +16,7 @@
     features = "mellow-barbet"
     navigate = true  # use n and N to move between diff sections
     dark = true      # or light = true, or omit for auto-detection
-    side-by-side = true
+    side-by-side = false
     minus-style = "syntax #2d1010"
     plus-style = "syntax #122b11"
     plus-emph-style = "syntax #084604"
