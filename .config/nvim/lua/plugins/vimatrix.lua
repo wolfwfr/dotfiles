@@ -1,9 +1,9 @@
 return {
   {
     -- enabled = false,
-    dir = "/home/wolf/Projects/src/github.com/wolfwfr/vimatrix.nvim",
+    -- dir = "/home/wolf/Projects/src/github.com/wolfwfr/vimatrix.nvim",
     -- dir = "/home/wolf/Projects/src/github.com/wolfwfr/refactor",
-    -- "wolfwfr/vimatrix.nvim",
+    "wolfwfr/vimatrix.nvim",
     -- enabled = false,
     opts = {
       droplet = {
@@ -33,8 +33,8 @@ return {
       colourscheme = "matrix",
       auto_activation = {
         screensaver = {
-          timeout = 180,
-          -- setup_deferral = 2,
+          timeout = 300,
+          -- setup_deferral = 0,
           -- block_on_term = false,
           -- block_on_cmd_line = true,
         },
@@ -47,8 +47,10 @@ return {
       window = {
         general = {
           background = "#000000",
+          -- background = "none",
           -- background = "",
           blend = 0,
+          zindex = 35, -- snacks explorer seems to open on zindex 33
         },
         by_filetype = {
           snacks_dashboard = {
@@ -92,6 +94,7 @@ return {
         -- built_in = {},
         -- custom = { "00", "11", "01", "10" },
         -- built_in = { "russian" },
+        -- built_in = { "binary" },
       },
     },
   },
