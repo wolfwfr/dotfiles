@@ -1,0 +1,167 @@
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+include ./bindings.conf
+include ./colours.conf
+include ./settings.conf
+
+
+#############
+# MODIFIERS #
+#############
+
+
+set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# move tiling windows via drag & drop by left-clicking into the title bar,
+# or left-clicking anywhere into the window while holding the floating modifier.
+tiling_drag modifier titlebar
+
+
+########
+# FONT #
+########
+
+# Font for window titles. Will also be used by the bar unless a different font
+font pango:System San Francisco Display 9
+
+##############
+# WORKSPACES #
+##############
+
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
+set $ws5 "5: "
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 "8: "
+set $ws9 "9: 󰒱"
+set $ws10 "10: "
+
+# office_meeting_room_monitor (rightside USB-C) = "DP-2"
+set $main "DP-3"
+set $laptop "eDP-1"
+
+# assign workspaces to monitor
+workspace $ws1 output $main
+workspace $ws2 output $main
+workspace $ws3 output $main
+workspace $ws4 output $main
+workspace $ws5 output $main
+workspace $ws6 output $laptop
+workspace $ws7 output $laptop
+workspace $ws8 output $laptop
+workspace $ws9 output $laptop
+workspace $ws10 output $laptop
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# switch to workspace with numpad
+bindsym $mod+mod2+KP_1 workspace number $ws1
+bindsym $mod+mod2+KP_2 workspace number $ws2
+bindsym $mod+mod2+KP_3 workspace number $ws3
+bindsym $mod+mod2+KP_4 workspace number $ws4
+bindsym $mod+mod2+KP_5 workspace number $ws5
+bindsym $mod+mod2+KP_6 workspace number $ws6
+bindsym $mod+mod2+KP_7 workspace number $ws7
+bindsym $mod+mod2+KP_8 workspace number $ws8
+bindsym $mod+mod2+KP_9 workspace number $ws9
+bindsym $mod+mod2+KP_0 workspace number $ws10
+
+# move focused container to workspace with numpad
+bindsym $mod+mod2+mod1+KP_1 move container to workspace number $ws1
+bindsym $mod+mod2+mod1+KP_2 move container to workspace number $ws2
+bindsym $mod+mod2+mod1+KP_3 move container to workspace number $ws3
+bindsym $mod+mod2+mod1+KP_4 move container to workspace number $ws4
+bindsym $mod+mod2+mod1+KP_5 move container to workspace number $ws5
+bindsym $mod+mod2+mod1+KP_6 move container to workspace number $ws6
+bindsym $mod+mod2+mod1+KP_7 move container to workspace number $ws7
+bindsym $mod+mod2+mod1+KP_8 move container to workspace number $ws8
+bindsym $mod+mod2+mod1+KP_9 move container to workspace number $ws9
+bindsym $mod+mod2+mod1+KP_0 move container to workspace number $ws10
+
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
+
+assign [class="kitty"] $ws1
+assign [class="com.mitchellh.ghostty"] $ws1
+# assign [class="firefox"] $ws2
+assign [class="LibreWolf"] $ws2
+assign [class="easyeffects"] $ws8
+assign [class="Slack"] $ws9
+assign [class="Spotify"] $ws10
+
+
+#########
+# EXECS #
+#########
+
+
+exec ghostty
+# exec kitty
+exec easyeffects
+exec spotify-launcher
+exec slack
+# exec firefox
+exec librewolf
+
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+exec --no-startup-id dex --autostart --environment i3
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 04090e --nofork
+
+# turn off by running `redshift -x`
+# exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
+
+# use arandr output here and always run feh (for background) after xrandr
+# exec_always xrandr --output eDP1 --primary --mode 1920x1080 --pos 2560x360 --rotate normal --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --mode 2560x1440 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+# exec_always xrandr --output eDP-1 --mode 1920x1080 --pos 2560x360 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 0x0 --rotate normal \
+# exec_always xrandr --output eDP-1 --primary --mode 2256x1504 --pos 2560x0 --rotate normal --output DP-3 --mode 2560x1440 --pos 0x0 --rotate normal \
+
+exec_always xrandr --output eDP-1 --primary --scale 1x1 --pos 2560x0 --rotate normal --output DP-3 --mode 2560x1440 --pos 0x0 --rotate normal \
+&& feh --bg-scale /home/wolf/Pictures/Wallpapers/green-trunk.jpg
+
+# office_meeting_room_monitor:
+# exec_always xrandr --output eDP-1 --primary --mode 2256x1504 --pos 0x656 --rotate normal --output DP-1 --off --output DP-2 --mode 3840x2160 --pos 2256x0 --rotate normal --output DP-3 --off --output DP-4 --off --output DP-5 --off --output DP-6 --off --output DP-7 --off --output DP-8 --off
+
+exec_always numlockx on
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec_always --no-startup-id xset dpms 0 0 600
+exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+exec_always --no-startup-id greenclip daemon
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
+
