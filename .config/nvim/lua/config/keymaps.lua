@@ -20,7 +20,6 @@ vim.keymap.set("n", "<c-k>", "<cmd>TmuxNavigateUp<CR>")
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 vim.keymap.set("n", "<leader>gn", "<CMD>Neogit<CR>", { desc = "Neogit" })
-vim.keymap.set("v", "<leader>ae", "<CMD>'<,'> ChatGPTRun explain_code<CR>", { desc = "chat-gpt explain" })
 
 -- lua dev convenience
 vim.keymap.set("n", "<leader>r", "<CMD>:w<CR><CMD>:source %<CR>", { desc = "write and execute current file" })
