@@ -1,0 +1,9 @@
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never --syntax-theme kanagawa
+gui:
+  sidePanelWidth: 0.25 # number from 0 to 1   # externalDiffCommand: delta --dark --paging=never --syntax-theme kanagawa
+keybinding:
+  universal:
+    filteringMenu: <c-g>

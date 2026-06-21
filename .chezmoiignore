@@ -15,3 +15,6 @@
 
 # ignore btop log
 /.config/btop/btop.log
+
+# ignore opencode node-modules
+/.config/opencode/node_modules

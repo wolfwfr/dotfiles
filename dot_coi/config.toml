@@ -1,0 +1,24 @@
+[network]
+mode = "open"   # restricted | open | allowlist
+
+# required for 'allowlist' mode
+allowed_domains = [
+    "8.8.8.8",             # Google DNS (REQUIRED for DNS resolution)
+    "1.1.1.1",             # Cloudflare DNS (REQUIRED for DNS resolution)
+    "registry.npmjs.org",  # npm package registry
+    "127.0.0.1",       # local kiro-gateway
+    "localhost",       # local kiro-gateway
+    "nodejs.org", # opencode wants it
+]
+
+[tool]
+name = "opencode"
+
+[container]
+persistent = true
+
+# Mount specific subdirectories - NOT the parent config dir
+[[mounts.default]]
+host = "~/.config/opencode/skills"
+container = "/home/code/.config/opencode/skills"
+readonly = true

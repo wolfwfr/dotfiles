@@ -1,0 +1,48 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "snapshot": false,
+    "provider": {
+        "kiro-gateway-local": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "kiro-gateway-local",
+            "options": {
+                "baseURL": "http://127.0.0.1:9000/v1"
+            },
+            "models": {
+                "auto": {
+                    "name": "auto"
+                },
+                "claude-sonnet-4.5": {
+                    "name": "claude-sonnet-4.5"
+                },
+                "deepseek-3.2": {
+                    "name": "deepseek-3.2"
+                },
+                "minimax-m2.5": {
+                    "name": "minimax-m2.5"
+                }
+            }
+        },
+        "kiro-gateway-incus": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "kiro-gateway-incus-bridge",
+            "options": {
+                "baseURL": "http://10.102.148.1:9000/v1"
+            },
+            "models": {
+                "auto": {
+                    "name": "auto"
+                },
+                "claude-sonnet-4.5": {
+                    "name": "claude-sonnet-4.5"
+                },
+                "deepseek-3.2": {
+                    "name": "deepseek-3.2"
+                },
+                "minimax-m2.5": {
+                    "name": "minimax-m2.5"
+                }
+            }
+        }
+    }
+}
