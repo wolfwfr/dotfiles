@@ -1,0 +1,17 @@
+# ignore fish dir contents
+/.config/fish/*
+# except these directories
+!/.config/fish/scripts
+!/.config/fish/conf.d
+!/.config/fish/functions
+!/.config/fish/themes
+# except these files
+!/.config/fish/config.fish
+!/.config/fish/archive
+!/.config/fish/fish_plugins
+
+# ignore tmux plugin dir contents
+/.config/tmux/plugins/*
+
+# ignore btop log
+/.config/btop/btop.log
