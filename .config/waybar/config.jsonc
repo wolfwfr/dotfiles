@@ -196,7 +196,8 @@
         },
         "events": {
             "on-discharging-warning": "notify-send -u critical -t 15000 'Low Battery\nDont leave me hanging bro 🥹'",
-            "on-discharging-critical": "notify-send -u critical -t 60000 'Very Low Battery\nI will miss you 🥲'"
+            "on-discharging-critical": "notify-send -u critical -t 60000 'Very Low Battery\nI will miss you 🥲'",
+            "on-charging-critical": "notify-send -t 10000 'You thought about me 🥹'"
         },
         "format": "<span color='#4db578'><big>{icon} </big></span> {capacity}%",
         "format-charging-full": "<span color='#4db578'><big>󱟢</big></span> {capacity}%",
