@@ -33,6 +33,8 @@ alias avl="aws-vault list"
 alias ave="aws-vault exec admin"
 alias aves="aws-vault exec --server admin"
 alias avel="aws-vault exec admin --duration=8h"
+alias lsec2us="aws ec2 describe-instances --region=us-east-1 | jq .Reservations.[].Instances.[] | jq '{a: .InstanceId, b: .State.Name, c: (.Tags[] | select(.Key == \"aws:cloudformation:stack-name\") | .Value)}' | jq 'select(.b == \"running\")'"
+alias lsec2eu="aws ec2 describe-instances --region=eu-west-1 | jq .Reservations.[].Instances.[] | jq '{a: .InstanceId, b: .State.Name, c: (.Tags[] | select(.Key == \"aws:cloudformation:stack-name\") | .Value)}' | jq 'select(.b == \"running\")'"
 
 # other
 alias got="go test ./..."
