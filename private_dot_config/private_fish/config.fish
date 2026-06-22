@@ -18,11 +18,9 @@ alias dil="docker kill"
 alias dip="docker image prune -a --filter " # followed by format: "until=2024-01-01T00:00:00"
 alias dsp="docker system prune"
 
-# files, dotfiles, nvim
+# files, nvim
 alias n="nvim ."
 alias ns="nvim" # ns=nvim session (auto-session will create or load a session)
-alias dotf="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias lazydot="lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls="eza --color=always --long --git"
 alias lss="eza --color=always --icons=always --long --no-filesize --no-time --no-user --no-permissions"
 alias cnvim="rm /home/wolf/.local/state/nvim/shada/*"
